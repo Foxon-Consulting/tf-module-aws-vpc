@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ansible_terraform:
+    image: ansible_terraform
+    ports:
+      - "2223:22"
+    volumes:
+      - ~/Desktop/Dev/terraform_modules/foxon-aws-vpc:/home/user/foxon-aws-vpc
+      - ~/Desktop/Dev/key:/home/user/key
+      - ~/.aws:/home/user/.aws
+    container_name: ansible_terraform_container
+    restart: unless-stopped
