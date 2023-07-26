@@ -31,13 +31,13 @@ resource "aws_subnet" "private" {
   }
 }
 
-// create private subnet for RDS
+// create secondary private subnet for RDS
 resource "aws_subnet" "private_rds" { // Because of limitation: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html
   vpc_id            = aws_vpc.this.id
-  cidr_block        = var.private_rds_subnet_cidr_block
+  cidr_block        = var.private_subnet_rds_cidr_block
   availability_zone = var.availability_zone_rds
   tags = {
-    Name  = "private"
+    Name  = "private-rds"
     isprd = var.vpc_isprd
   }
 }
@@ -68,4 +68,8 @@ resource "aws_route_table" "this" {
 resource "aws_route_table_association" "this" {
   subnet_id      = aws_subnet.public.id
   route_table_id = aws_route_table.this.id
+  tags = {
+    Name  = "rta"
+    isprd = var.vpc_isprd
+  }
 }

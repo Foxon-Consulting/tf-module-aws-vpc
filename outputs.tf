@@ -39,12 +39,12 @@ output "private_subnet_cidr_block" {
   description = "value of the private subnet cidr block"
 }
 
-output "private_rds_subnet_id" {
+output "private_subnet_rds_id" {
   value       = aws_subnet.private_rds.id
   description = "value of the private rds subnet id"
 }
 
-output "private_rds_subnet_cidr_block" {
+output "private_subnet_rds_cidr_block" {
   value       = aws_subnet.private_rds.cidr_block
   description = "value of the private rds subnet cidr block"
 }
