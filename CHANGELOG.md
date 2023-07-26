@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.0...v0.1.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* :ambulance: remove tags from route table association ([#5](https://github.com/Foxon-Consulting/tf-module-aws-vpc/issues/5)) ([afed0b8](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/afed0b8f34dd4d6d405009a5b0fd43f66ab79851))
+
 ## 0.1.0 (2023-07-26)
 
 
