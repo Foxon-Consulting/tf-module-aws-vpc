@@ -73,3 +73,13 @@ output "igw_arn" {
   value       = aws_internet_gateway.this.arn
   description = "value of the internet gateway arn"
 }
+
+output "rta_id" {
+  value       = aws_route_table.this.id
+  description = "value of the route table id"
+}
+
+output "rta_arn" {
+  value       = aws_route_table.this.arn
+  description = "value of the route table arn"
+}
