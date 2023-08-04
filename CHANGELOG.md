@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.1...v0.1.2) (2023-08-04)
+
+
+### Bug Fixes
+
+* :sparkles: add rta_id and rta_arn in outputs ([#7](https://github.com/Foxon-Consulting/tf-module-aws-vpc/issues/7)) ([15b86a1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/15b86a1d7fc683c19ef67d1cd3738412616f6570))
+
 ## [0.1.1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.0...v0.1.1) (2023-07-26)
 
 
