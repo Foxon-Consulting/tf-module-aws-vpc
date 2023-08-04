@@ -56,6 +56,8 @@ No modules.
 | <a name="output_private_subnet_rds_id"></a> [private\_subnet\_rds\_id](#output\_private\_subnet\_rds\_id) | value of the private rds subnet id |
 | <a name="output_public_subnet_cidr_block"></a> [public\_subnet\_cidr\_block](#output\_public\_subnet\_cidr\_block) | value of the public subnet cidr block |
 | <a name="output_public_subnet_id"></a> [public\_subnet\_id](#output\_public\_subnet\_id) | value of the public subnet id |
+| <a name="output_rta_arn"></a> [rta\_arn](#output\_rta\_arn) | value of the route table arn |
+| <a name="output_rta_id"></a> [rta\_id](#output\_rta\_id) | value of the route table id |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | value of vpc arn |
 | <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | value of vpc cidr block |
 | <a name="output_vpc_enable_dns_hostnames"></a> [vpc\_enable\_dns\_hostnames](#output\_vpc\_enable\_dns\_hostnames) | true if dns hostnames are enabled on the VPC |
