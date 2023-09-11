@@ -3,8 +3,9 @@ resource "aws_vpc" "this" {
   cidr_block           = var.vpc_cidr_block
   enable_dns_hostnames = true
   tags = {
-    Name  = var.vpc_name
-    isprd = var.vpc_isprd
+    Name    = var.vpc_name
+    isprd   = var.vpc_isprd
+    clientt = var.client_name
   }
 }
 
@@ -15,8 +16,9 @@ resource "aws_subnet" "public" {
   availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
   tags = {
-    Name  = "public"
-    isprd = var.vpc_isprd
+    Name        = "public"
+    isprd       = var.vpc_isprd
+    client_name = var.client_name
   }
 }
 
@@ -26,8 +28,9 @@ resource "aws_subnet" "private" {
   cidr_block        = var.private_subnet_cidr_block
   availability_zone = var.availability_zone
   tags = {
-    Name  = "private"
-    isprd = var.vpc_isprd
+    Name        = "private"
+    isprd       = var.vpc_isprd
+    client_name = var.client_name
   }
 }
 
@@ -37,8 +40,9 @@ resource "aws_subnet" "private_rds" { // Because of limitation: https://docs.aws
   cidr_block        = var.private_subnet_rds_cidr_block
   availability_zone = var.availability_zone_rds
   tags = {
-    Name  = "private-rds"
-    isprd = var.vpc_isprd
+    Name        = "private-rds"
+    isprd       = var.vpc_isprd
+    client_name = var.client_name
   }
 }
 
@@ -46,8 +50,9 @@ resource "aws_subnet" "private_rds" { // Because of limitation: https://docs.aws
 resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
   tags = {
-    Name  = "igw"
-    isprd = var.vpc_isprd
+    Name        = "igw"
+    isprd       = var.vpc_isprd
+    client_name = var.client_name
   }
 }
 
@@ -59,8 +64,9 @@ resource "aws_route_table" "this" {
     gateway_id = aws_internet_gateway.this.id
   }
   tags = {
-    Name  = "rt"
-    isprd = var.vpc_isprd
+    Name        = "rt"
+    isprd       = var.vpc_isprd
+    client_name = var.client_name
   }
 }
 

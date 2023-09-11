@@ -3,6 +3,11 @@ variable "vpc_name" {
   type        = string
 }
 
+variable "client_name" {
+  description = "The name of the client"
+  type        = string
+}
+
 variable "availability_zone" {
   description = "The availability zone of the VPC"
   type        = string
