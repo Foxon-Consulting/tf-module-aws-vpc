@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.2.0...v0.2.1) (2023-09-11)
+
+
+### Bug Fixes
+
+* :pencil2: typo in tag name "client" ([635ef3e](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/635ef3e931e5e842cef048de431647722cdf04c0))
+
 ## [0.2.0](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.2...v0.2.0) (2023-09-11)
 
 
