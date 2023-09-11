@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.2...v0.2.0) (2023-09-11)
+
+
+### Features
+
+* :sparkles: add client name as var to put in tag env ([#9](https://github.com/Foxon-Consulting/tf-module-aws-vpc/issues/9)) ([004610b](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/004610b0a8b1d5012d38bd86f4c059efb098ff0a))
+
 ## [0.1.2](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.1.1...v0.1.2) (2023-08-04)
 
 
