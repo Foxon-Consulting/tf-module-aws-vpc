@@ -6,8 +6,9 @@ services:
     ports:
       - "2223:22"
     volumes:
-      - ~/Desktop/Dev/terraform_modules/foxon-aws-vpc:/home/user/foxon-aws-vpc
+      # - ~/Desktop/Dev/terraform_modules/tf-module-aws-vpc:/home/user/tf-module-aws-vpc
+      - ./:/home/user/tf-module
       - ~/Desktop/Dev/key:/home/user/key
       - ~/.aws:/home/user/.aws
-    container_name: ansible_terraform_container
+    container_name: devops_toolkit
     restart: unless-stopped
