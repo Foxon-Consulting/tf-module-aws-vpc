@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.16.1 |
 
 ## Modules
 
@@ -35,12 +35,14 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_availability_zone"></a> [availability\_zone](#input\_availability\_zone) | The availability zone of the VPC | `string` | `"eu-west-1a"` | no |
 | <a name="input_availability_zone_rds"></a> [availability\_zone\_rds](#input\_availability\_zone\_rds) | The availability zone of the second RDS subnet | `string` | `"eu-west-1b"` | no |
+| <a name="input_aws_route_table_cidr_block"></a> [aws\_route\_table\_cidr\_block](#input\_aws\_route\_table\_cidr\_block) | The CIDR block of the route table | `string` | `"0.0.0.0/0"` | no |
+| <a name="input_client"></a> [client](#input\_client) | The name of the client | `string` | n/a | yes |
+| <a name="input_env_type"></a> [env\_type](#input\_env\_type) | The type of the environment. Ex: (npe, prd) | `string` | n/a | yes |
 | <a name="input_private_subnet_cidr_block"></a> [private\_subnet\_cidr\_block](#input\_private\_subnet\_cidr\_block) | The CIDR block of the private subnet | `string` | `"10.0.2.0/24"` | no |
 | <a name="input_private_subnet_rds_cidr_block"></a> [private\_subnet\_rds\_cidr\_block](#input\_private\_subnet\_rds\_cidr\_block) | The CIDR block of the second private subnet for RDS | `string` | `"10.0.3.0/24"` | no |
 | <a name="input_public_subnet_cidr_block"></a> [public\_subnet\_cidr\_block](#input\_public\_subnet\_cidr\_block) | The CIDR block of the public subnet | `string` | `"10.0.1.0/24"` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | The common tags for all resources | `map(string)` | n/a | yes |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | The CIDR block of the VPC | `string` | `"10.0.0.0/16"` | no |
-| <a name="input_vpc_isprd"></a> [vpc\_isprd](#input\_vpc\_isprd) | If a VPC is prd or noprd | `bool` | `false` | no |
-| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | The name of the VPC | `string` | n/a | yes |
 
 ## Outputs
 
@@ -62,5 +64,4 @@ No modules.
 | <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | value of vpc cidr block |
 | <a name="output_vpc_enable_dns_hostnames"></a> [vpc\_enable\_dns\_hostnames](#output\_vpc\_enable\_dns\_hostnames) | true if dns hostnames are enabled on the VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | value of vpc id |
-| <a name="output_vpc_isprd"></a> [vpc\_isprd](#output\_vpc\_isprd) | value of tag is prd. Is the VPC a PRD or NO-PRD VPC |
 <!-- END_TF_DOCS -->
