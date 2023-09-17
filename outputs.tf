@@ -1,9 +1,3 @@
-// output vpc id
-output "env_type" {
-  value       = var.env_type
-  description = "value of the environment type"
-}
-
 output "vpc_id" {
   value       = aws_vpc.this.id
   description = "value of vpc id"
