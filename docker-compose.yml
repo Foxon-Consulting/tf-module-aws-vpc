@@ -10,5 +10,5 @@ services:
       - ./:/home/user/tf-module
       - ~/Desktop/Dev/key:/home/user/key
       - ~/.aws:/home/user/.aws
-    container_name: devops_toolkit
+    container_name: tf-module-vpc
     restart: unless-stopped
