@@ -1,14 +1,4 @@
-# variable "vpc_name" {
-#   description = "The name of the VPC"
-#   type        = string
-# }
-
-# variable "client_name" {
-#   description = "The name of the client"
-#   type        = string
-# }
-
-variable "common_tags" {
+variable "tags" {
   description = "The common tags for all resources"
   type        = map(string)
 }
@@ -29,20 +19,11 @@ variable "availability_zone" {
   }
 }
 
-
 variable "public_subnet_cidr_block" {
   description = "The CIDR block of the public subnet"
   type        = string
   default     = "10.0.1.0/24"
 }
-
-# variable "vpc_isprd" {
-#   description = "If a VPC is prd or noprd"
-#   type        = bool
-#   default     = false
-# }
-
-
 
 variable "private_subnet_cidr_block" {
   description = "The CIDR block of the private subnet"
