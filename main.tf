@@ -1,8 +1,19 @@
 // create VPC
+locals {
+  full_name = "${var.client}-${var.env_type}"
+  tags = merge(var.tags, {
+    client   = var.client
+    env_type = var.env_type
+  })
+}
+
 resource "aws_vpc" "this" {
   cidr_block           = var.vpc_cidr_block
   enable_dns_hostnames = true
-  tags                 = var.tags
+  tags = merge(local.tags, {
+    Name = local.full_name
+  })
+
 }
 
 // create public subnet
@@ -11,8 +22,8 @@ resource "aws_subnet" "public" {
   cidr_block              = var.public_subnet_cidr_block
   availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
-  tags = merge(var.tags, {
-    Name = "public"
+  tags = merge(local.tags, {
+    Name = "${local.full_name}-public	"
   })
 }
 
@@ -22,7 +33,7 @@ resource "aws_subnet" "private" {
   cidr_block        = var.private_subnet_cidr_block
   availability_zone = var.availability_zone
   tags = merge(var.tags, {
-    Name = "private"
+    Name = "${local.full_name}-private"
   })
 }
 
@@ -32,7 +43,7 @@ resource "aws_subnet" "private_rds" { // Because of limitation: https://docs.aws
   cidr_block        = var.private_subnet_rds_cidr_block
   availability_zone = var.availability_zone_rds
   tags = merge(var.tags, {
-    Name = "private-rds"
+    Name = "${local.full_name}-private-rds"
   })
 }
 
@@ -40,7 +51,7 @@ resource "aws_subnet" "private_rds" { // Because of limitation: https://docs.aws
 resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
   tags = merge(var.tags, {
-    Name = "igw"
+    Name = "${local.full_name}-igw"
   })
 }
 
@@ -52,7 +63,7 @@ resource "aws_route_table" "this" {
     gateway_id = aws_internet_gateway.this.id
   }
   tags = merge(var.tags, {
-    Name = "rt"
+    Name = "${local.full_name}-rt"
   })
 }
 

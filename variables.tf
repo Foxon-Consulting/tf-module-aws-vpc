@@ -1,3 +1,13 @@
+variable "client" {
+  description = "The name of the client"
+  type        = string
+}
+
+variable "env_type" {
+  description = "The type of the environment. Ex: (npe, prd)"
+  type        = string
+}
+
 variable "tags" {
   description = "The common tags for all resources"
   type        = map(string)
