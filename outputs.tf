@@ -14,11 +14,6 @@ output "vpc_cidr_block" {
   description = "value of vpc cidr block"
 }
 
-output "vpc_isprd" {
-  value       = aws_vpc.this.tags["isprd"]
-  description = "value of tag is prd. Is the VPC a PRD or NO-PRD VPC"
-}
-
 output "public_subnet_id" {
   value       = aws_subnet.public.id
   description = "value of the public subnet id"

@@ -1,11 +1,22 @@
-variable "vpc_name" {
-  description = "The name of the VPC"
-  type        = string
+# variable "vpc_name" {
+#   description = "The name of the VPC"
+#   type        = string
+# }
+
+# variable "client_name" {
+#   description = "The name of the client"
+#   type        = string
+# }
+
+variable "common_tags" {
+  description = "The common tags for all resources"
+  type        = map(string)
 }
 
-variable "client_name" {
-  description = "The name of the client"
+variable "vpc_cidr_block" {
+  description = "The CIDR block of the VPC"
   type        = string
+  default     = "10.0.0.0/16"
 }
 
 variable "availability_zone" {
@@ -18,23 +29,20 @@ variable "availability_zone" {
   }
 }
 
-variable "vpc_isprd" {
-  description = "If a VPC is prd or noprd"
-  type        = bool
-  default     = false
-}
-
-variable "vpc_cidr_block" {
-  description = "The CIDR block of the VPC"
-  type        = string
-  default     = "10.0.0.0/16"
-}
 
 variable "public_subnet_cidr_block" {
   description = "The CIDR block of the public subnet"
   type        = string
   default     = "10.0.1.0/24"
 }
+
+# variable "vpc_isprd" {
+#   description = "If a VPC is prd or noprd"
+#   type        = bool
+#   default     = false
+# }
+
+
 
 variable "private_subnet_cidr_block" {
   description = "The CIDR block of the private subnet"
@@ -56,4 +64,10 @@ variable "availability_zone_rds" {
     condition     = can(regex("eu-west-1[ab]", var.availability_zone_rds))
     error_message = "The availability zone must be eu-west-1a or eu-west-1b"
   }
+}
+
+variable "aws_route_table_cidr_block" {
+  description = "The CIDR block of the route table"
+  type        = string
+  default     = "0.0.0.0/0"
 }
