@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.2.1...v1.0.0) (2023-09-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* :boom: allow vpc to have comon tags. Change variables.tf
+
+### Code Refactoring
+
+* :boom: allow vpc to have comon tags. Change variables.tf ([f130239](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/f130239d50728b383ad64efc9ad762802842b65f))
+
 ## [0.2.1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.2.0...v0.2.1) (2023-09-11)
 
 
