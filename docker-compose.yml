@@ -1,14 +1,14 @@
 version: '3'
 
 services:
-  ansible_terraform:
-    image: ansible_terraform
+  devops-toolkit:
+    image: devops_toolkit
     ports:
-      - "2223:22"
+      - "2230:22"
     volumes:
       # - ~/Desktop/Dev/terraform_modules/tf-module-aws-vpc:/home/user/tf-module-aws-vpc
       - ./:/home/user/tf-module
-      - ~/Desktop/Dev/key:/home/user/key
-      - ~/.aws:/home/user/.aws
-    container_name: tf-module-vpc
+      - ./key:/home/user/key
+      - ~/.aws:/root/.aws
+    container_name: tf-module-vpc_cn
     restart: unless-stopped
