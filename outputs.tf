@@ -18,6 +18,11 @@ output "public_subnet_id" {
   description = "value of the public subnet id"
 }
 
+output "public_subnet_arn" {
+  value       = aws_subnet.public.arn
+  description = "value of the public subnet arn"
+}
+
 output "public_subnet_cidr_block" {
   value       = aws_subnet.public.cidr_block
   description = "value of the public subnet cidr block"
@@ -28,6 +33,11 @@ output "private_subnet_id" {
   description = "value of the private subnet id"
 }
 
+output "private_subnet_arn" {
+  value       = aws_subnet.private.arn
+  description = "value of the private subnet arn"
+}
+
 output "private_subnet_cidr_block" {
   value       = aws_subnet.private.cidr_block
   description = "value of the private subnet cidr block"
@@ -36,6 +46,11 @@ output "private_subnet_cidr_block" {
 output "private_subnet_rds_id" {
   value       = aws_subnet.private_rds.id
   description = "value of the private rds subnet id"
+}
+
+output "private_subnet_rds_arn" {
+  value       = aws_subnet.private_rds.arn
+  description = "value of the private rds subnet arn"
 }
 
 output "private_subnet_rds_cidr_block" {
