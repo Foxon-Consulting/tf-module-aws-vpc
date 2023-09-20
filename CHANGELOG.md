@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v1.0.0...v1.1.0) (2023-09-20)
+
+
+### Features
+
+* :sparkles: add arn in output for subnet (public, private and rds) ([#15](https://github.com/Foxon-Consulting/tf-module-aws-vpc/issues/15)) ([9c00fc1](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/9c00fc129cd0598caca71b50819dc51b3ffa34fe))
+
+
+### Bug Fixes
+
+* :pencil2: fix a tabulation into a flag passed in aws_subnet public ([f08386c](https://github.com/Foxon-Consulting/tf-module-aws-vpc/commit/f08386cb18d7c143a4d16e9f6179fb41f2cc553c))
+
 ## [1.0.0](https://github.com/Foxon-Consulting/tf-module-aws-vpc/compare/v0.2.1...v1.0.0) (2023-09-17)
 
 
