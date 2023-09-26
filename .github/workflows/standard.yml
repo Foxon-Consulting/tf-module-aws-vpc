@@ -15,7 +15,7 @@ jobs:
         uses: Foxon-Consulting/github-actions/integration/common/pre-commit@main
 
   integration:
-    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_integration.yml@tf_module
+    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_integration.yml@main
 
   releasing:
     runs-on: ubuntu-latest
@@ -34,7 +34,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_delivery.yml@tf_module
+    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_delivery.yml@main
 
   deployment:
     needs:
@@ -44,4 +44,4 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_deployment.yml@tf_module
+    uses: Foxon-Consulting/github-actions/.github/workflows/tf-module_deployment.yml@main
