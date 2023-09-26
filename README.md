@@ -52,10 +52,13 @@ No modules.
 | <a name="output_availability_zone_rds"></a> [availability\_zone\_rds](#output\_availability\_zone\_rds) | value of the availability zone for RDS. It is mandatory to have 2 different AZ to deploy a RDS |
 | <a name="output_igw_arn"></a> [igw\_arn](#output\_igw\_arn) | value of the internet gateway arn |
 | <a name="output_igw_id"></a> [igw\_id](#output\_igw\_id) | value of the internet gateway id |
+| <a name="output_private_subnet_arn"></a> [private\_subnet\_arn](#output\_private\_subnet\_arn) | value of the private subnet arn |
 | <a name="output_private_subnet_cidr_block"></a> [private\_subnet\_cidr\_block](#output\_private\_subnet\_cidr\_block) | value of the private subnet cidr block |
 | <a name="output_private_subnet_id"></a> [private\_subnet\_id](#output\_private\_subnet\_id) | value of the private subnet id |
+| <a name="output_private_subnet_rds_arn"></a> [private\_subnet\_rds\_arn](#output\_private\_subnet\_rds\_arn) | value of the private rds subnet arn |
 | <a name="output_private_subnet_rds_cidr_block"></a> [private\_subnet\_rds\_cidr\_block](#output\_private\_subnet\_rds\_cidr\_block) | value of the private rds subnet cidr block |
 | <a name="output_private_subnet_rds_id"></a> [private\_subnet\_rds\_id](#output\_private\_subnet\_rds\_id) | value of the private rds subnet id |
+| <a name="output_public_subnet_arn"></a> [public\_subnet\_arn](#output\_public\_subnet\_arn) | value of the public subnet arn |
 | <a name="output_public_subnet_cidr_block"></a> [public\_subnet\_cidr\_block](#output\_public\_subnet\_cidr\_block) | value of the public subnet cidr block |
 | <a name="output_public_subnet_id"></a> [public\_subnet\_id](#output\_public\_subnet\_id) | value of the public subnet id |
 | <a name="output_rta_arn"></a> [rta\_arn](#output\_rta\_arn) | value of the route table arn |
